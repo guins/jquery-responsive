@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Responsive jQuery Plugin</title>
+        <meta name="description" content="Responsive jQuery Plugin">
+        <style type="text/css">
+            * { padding: 0; margin: 0; }
+        	body {  }
+        	div[data-responsive] {
+        		position: relative;
+        		width: 180px;
+        		height: 180px;
+                padding: 10px;
+                margin: 10px 0 0 10px;
+        		float: left;
+        	}
+        	div[data-responsive]:before { 
+        		content: attr(data-responsive);
+        	}
+        	div[data-responsive="mob-only"],
+        	div[data-responsive="not-mob"] { background: #333; }
+        	div[data-responsive="tab-only"],
+        	div[data-responsive="not-tab"] { background: #aaa; }
+        	div[data-responsive="desk-only"],
+        	div[data-responsive="not-desk"] { background: #eee; }
+        </style>
+    </head>
+    <body>
+    	
+    	<div class="container">
+            <div data-responsive="mob-only"></div>
+            <div data-responsive="mob-only"></div>
+            <div data-responsive="mob-only"></div>
+            <div data-responsive="tab-only"></div>
+            <div data-responsive="desk-only" style="display:none;"></div>
+            <div data-responsive="mob-only"></div>
+            <div data-responsive="desk-only"></div>
+            <div data-responsive="desk-only"></div>
+            <div data-responsive="mob-only"></div>
+            <div data-responsive="tab-only"></div>
+        </div>
+        
+        <!-- 
+        <div class="container">
+    		<div data-responsive="not-mob"></div>
+	    	<div data-responsive="not-mob"></div>
+	    	<div data-responsive="not-mob"></div>
+	    	<div data-responsive="not-tab"></div>
+	    	<div data-responsive="not-desk" style="display:none;"></div>
+	    	<div data-responsive="not-mob"></div>
+	    	<div data-responsive="not-desk"></div>
+	    	<div data-responsive="not-desk"></div>
+	    	<div data-responsive="not-mob"></div>
+	    	<div data-responsive="not-tab"></div>
+    	</div>
+        -->
+
+
+    	<script src="js/libs/jquery-1.9.0.min.js"></script>
+        <script src="js/responsive-0.1.jquery.js"></script> 
+    	<!-- <script src="js/responsive-0.1.min.jquery.js"></script>-->
+        <script src="js/main.js"></script>
+    </body>
+</html>
